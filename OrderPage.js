@@ -47,8 +47,8 @@ function orderProcessed(formId) {
     var cash = $("#" + formId + " #cash").val(); // Get cash input
 
     // Get order details
-    var foodTotal = parseFloat($("#" + formId + " #total-bill-food").val()) || 0;
-    var servicesTotal = parseFloat($("#" + formId + " #total-bill-services").val()) || 0;
+    var foodTotal = parseFloat($("#total-bill-food").val()) || 0;
+    var servicesTotal = parseFloat($("#total-bill-services").val()) || 0;
     var total = foodTotal + servicesTotal;
 
     // Display order confirmation or perform further processing as needed
