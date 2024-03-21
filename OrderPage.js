@@ -50,7 +50,7 @@ function orderProcessed(formId) {
     var foodTotal = parseFloat($("#total-bill-food").val()) || 0;
     var servicesTotal = parseFloat($("#total-bill-services").val()) || 0;
     var total = foodTotal + servicesTotal;
-    var change = total - cash;
+    var change = cash - total;
 
     // Display order confirmation or perform further processing as needed
     if (!isNaN(total)) {
