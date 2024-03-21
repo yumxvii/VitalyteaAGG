@@ -54,7 +54,7 @@ function orderProcessed(formId) {
 
     // Display order confirmation or perform further processing as needed
     if (!isNaN(total)) {
-        alert("Thank you, " + firstName + " " + lastName + ", for your order!\n\nTotal amount: ₱" + total.toFixed(2) + "\tChange: ₱" + change.toFixed(2));
+        alert("Thank you, " + firstName + " " + lastName + ", for your order!\n\nTotal amount: ₱" + total.toFixed(2) + " Change: ₱" + change.toFixed(2));
     } else {
         alert("There was an error processing your order. Please try again.");
     }
