@@ -44,16 +44,17 @@ function orderProcessed(formId) {
     var city = $("#" + formId + " #city").val();
     var street = $("#" + formId + " #street").val();
     var postalCode = $("#" + formId + " #postal_code").val();
-    var cash = $("#" + formId + " #cash").val(); // Get cash input
+    var cash = $("#cash").val(); // Get cash input
 
     // Get order details
     var foodTotal = parseFloat($("#total-bill-food").val()) || 0;
     var servicesTotal = parseFloat($("#total-bill-services").val()) || 0;
     var total = foodTotal + servicesTotal;
+    var change = total - cash;
 
     // Display order confirmation or perform further processing as needed
     if (!isNaN(total)) {
-        alert("Thank you, " + firstName + " " + lastName + ", for your order!\n\nTotal amount: ₱" + total.toFixed(2));
+        alert("Thank you, " + firstName + " " + lastName + ", for your order!\n\nTotal amount: ₱" + total.toFixed(2) + "\n\nChange: ₱" + change.toFixed(2));
     } else {
         alert("There was an error processing your order. Please try again.");
     }
